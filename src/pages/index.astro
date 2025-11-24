@@ -1,31 +1,253 @@
 ---
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Titanumy.art</title>
-    <style>
-      body {
-        background: #020617;
-        color: #e5f5ff;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 120px;
-      }
-      h1 {
-        font-size: 3rem;
-        color: #38bdf8;
-        text-shadow: 0 0 20px #0ea5e9;
-      }
-      p {
-        opacity: 0.8;
-      }
-    </style>
-  </head>
+<Layout title="Titanumy.art – Cosmic Web Agency">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Cosmic Web • SEO • Security</p>
+      <h1>
+        Space-grade websites<br />
+        for small businesses on Earth.
+      </h1>
+      <p class="sub">
+        Titanumy.art builds fast, secure, and beautiful sites with a universe-level
+        vibe. Static, modern, SEO-ready, and protected by real cybersecurity
+        thinking.
+      </p>
 
-  <body>
-    <h1>Welcome to Titanumy.art 🚀</h1>
-    <p>Astro + Netlify is LIVE and working.</p>
-  </body>
-</html>
+      <div class="hero-actions">
+        <a href="/contact" class="btn primary">Start a project</a>
+        <a href="/services" class="btn ghost">View services</a>
+      </div>
+
+      <div class="hero-meta">
+        <span>⚡ Astro + Netlify</span>
+        <span>🛡️ Security-minded by design</span>
+        <span>🚀 Ready to launch quickly</span>
+      </div>
+    </div>
+
+    <div class="hero-orbit">
+      <div class="planet-core"></div>
+      <div class="orbit orbit-outer"></div>
+      <div class="orbit orbit-middle"></div>
+      <div class="orbit orbit-inner"></div>
+      <div class="satellite"></div>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>Web Design</h2>
+      <p>
+        Clean, responsive one-page and multi-page sites with a futuristic Titanumy
+        style. Built static for speed and reliability.
+      </p>
+    </article>
+    <article class="card">
+      <h2>SEO & Performance</h2>
+      <p>
+        Optimized content, metadata, and structure so clients actually find your
+        website — not just your business card.
+      </p>
+    </article>
+    <article class="card">
+      <h2>Practical Cybersecurity</h2>
+      <p>
+        Basic hardening, HTTPS, security headers, and sane practices baked in from
+        the first commit. No snake-oil.
+      </p>
+    </article>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.6rem, 4vw, 3.4rem);
+    line-height: 1.08;
+    margin: 0.4rem 0 1.1rem;
+    color: #e5f2ff;
+    text-shadow:
+      0 0 24px rgba(56, 189, 248, 0.7),
+      0 0 52px rgba(8, 47, 73, 0.9);
+  }
+
+  .eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.21em;
+    text-transform: uppercase;
+    color: #a5b4fc;
+  }
+
+  .sub {
+    max-width: 32rem;
+    color: #cbd5f5;
+    font-size: 0.98rem;
+  }
+
+  .hero-actions {
+    margin: 1.4rem 0 1.1rem;
+    display: flex;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.18s ease-out;
+  }
+
+  .btn.primary {
+    background: radial-gradient(circle at 0 0, #22d3ee, #0ea5e9);
+    color: #020617;
+    box-shadow:
+      0 0 24px rgba(56, 189, 248, 0.9),
+      0 0 40px rgba(8, 47, 73, 0.9);
+  }
+
+  .btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow:
+      0 0 30px rgba(56, 189, 248, 1),
+      0 0 60px rgba(8, 47, 73, 1);
+  }
+
+  .btn.ghost {
+    border-color: rgba(148, 163, 184, 0.4);
+    color: #e5f2ff;
+    background: rgba(15, 23, 42, 0.7);
+  }
+
+  .btn.ghost:hover {
+    border-color: rgba(129, 140, 248, 0.9);
+    box-shadow: 0 0 18px rgba(129, 140, 248, 0.7);
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+  }
+
+  .hero-meta span {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: rgba(15, 23, 42, 0.8);
+  }
+
+  .hero-orbit {
+    position: relative;
+    width: min(320px, 80vw);
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+  }
+
+  .planet-core {
+    position: absolute;
+    inset: 50%;
+    width: 40%;
+    height: 40%;
+    transform: translate(-50%, -50%);
+    border-radius: 999px;
+    background:
+      radial-gradient(circle at 30% 20%, #e0f2fe, #38bdf8 40%, #1e40af 70%),
+      radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.9), transparent 60%);
+    box-shadow:
+      0 0 55px rgba(56, 189, 248, 0.7),
+      0 0 95px rgba(37, 99, 235, 0.7);
+  }
+
+  .orbit {
+    position: absolute;
+    inset: 14%;
+    border-radius: 999px;
+    border: 1px dashed rgba(148, 163, 184, 0.28);
+    box-shadow: 0 0 24px rgba(15, 23, 42, 0.8);
+  }
+
+  .orbit-middle { inset: 5%; opacity: 0.7; }
+  .orbit-inner  { inset: 0;  opacity: 0.4; }
+
+  .satellite {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #f97316;
+    box-shadow:
+      0 0 18px rgba(249, 115, 22, 0.9),
+      0 0 34px rgba(248, 250, 252, 0.8);
+    top: 10%;
+    right: 16%;
+    animation: orbit-sat 12s linear infinite;
+  }
+
+  @keyframes orbit-sat {
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+
+  .card {
+    padding: 1.4rem 1.3rem 1.1rem;
+    border-radius: 1.1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+    box-shadow:
+      0 0 24px rgba(15, 23, 42, 0.9),
+      0 0 45px rgba(15, 23, 42, 0.9);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #e5e7eb;
+  }
+
+  .card p {
+    margin-bottom: 0;
+    font-size: 0.94rem;
+    color: #cbd5f5;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr);
+      text-align: left;
+    }
+    .hero-orbit {
+      order: -1;
+      margin-bottom: 1.5rem;
+    }
+    .grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
