@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contact – Titanumy.art">
+  <section class="section">
+    <h1>Contact</h1>
+    <p class="lead">
+      Tell me what you want to launch. A simple one-page site, a full small-business
+      presence, or a redesign of something that already exists.
+    </p>
+
+    <div class="contact-grid">
+      <form
+        class="form-card"
+        name="titanumy-contact"
+        method="POST"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+      >
+        <input type="hidden" name="form-name" value="titanumy-contact" />
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human:
+            <input name="bot-field" />
+          </label>
+        </p>
+
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Project type
+          <select name="project">
+            <option value="one-page">One-page launch site</option>
+            <option value="business">Business website</option>
+            <option value="security">Care & security</option>
+            <option value="other">Other / mixed</option>
+          </select>
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+
+        <button type="submit" class="btn primary">Send to Titanumy</button>
+      </form>
+
+      <aside class="info-card">
+        <h2>How it works</h2>
+        <ol>
+          <li>You send a quick description of what you want.</li>
+          <li>We agree on scope, price, and timeline.</li>
+          <li>I build the site in a private staging URL.</li>
+          <li>We polish, then launch to your domain.</li>
+        </ol>
+
+        <p class="note">
+          Response time is usually within one business day. Messages in English or
+          French are both welcome.
+        </p>
+      </aside>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 3vw, 2.3rem);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 24px rgba(56, 189, 248, 0.9);
+  }
+
+  .lead {
+    color: #cbd5f5;
+    font-size: 0.97rem;
+    max-width: 36rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 1.6rem;
+  }
+
+  .form-card,
+  .info-card {
+    padding: 1.4rem 1.3rem;
+    border-radius: 1.1rem;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    margin-bottom: 0.8rem;
+  }
+
+  input,
+  textarea,
+  select {
+    background: rgba(15, 23, 42, 0.9);
+    border-radius: 0.6rem;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    color: #e5f2ff;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.9rem;
+    outline: none;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.8);
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .info-card h2 {
+    margin-top: 0;
+    font-size: 1.05rem;
+  }
+
+  .info-card ol {
+    margin: 0.4rem 0 1rem;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    color: #d1d5db;
+  }
+
+  .info-card li + li {
+    margin-top: 0.25rem;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>

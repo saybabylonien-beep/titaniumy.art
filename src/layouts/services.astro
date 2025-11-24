@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Services – Titanumy.art">
+  <section class="section">
+    <h1>Services</h1>
+    <p class="lead">
+      One small site for your business, one giant leap for your online presence.
+      Everything is built with speed, clarity, and security in mind.
+    </p>
+
+    <div class="services-grid">
+      <article class="service">
+        <h2>Single-Page Launch Site</h2>
+        <p>
+          Perfect for painters, consultants, and local businesses. A focused one-page
+          site with your story, services, portfolio, and contact.
+        </p>
+        <ul>
+          <li>Custom design with Titanumy cosmic style</li>
+          <li>Mobile-first, ultra-fast static site</li>
+          <li>Basic SEO + Google indexing setup</li>
+          <li>Contact form wired to your email</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <h2>Business Website</h2>
+        <p>
+          Multi-section site for serious businesses that need more content: services,
+          team, projects, FAQs, and more.
+        </p>
+        <ul>
+          <li>Extra pages: services, about, blog, etc.</li>
+          <li>SEO-ready structure and metadata</li>
+          <li>Performance & accessibility checks</li>
+          <li>Analytics hookup on request</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <h2>Care & Security</h2>
+        <p>
+          Ongoing support so your site doesn’t drift in space. Light maintenance and
+          security checks on a predictable schedule.
+        </p>
+        <ul>
+          <li>Small content updates per month</li>
+          <li>Security headers & TLS sanity checks</li>
+          <li>Uptime + basic monitoring configuration</li>
+          <li>Occasional performance tune-ups</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 3vw, 2.4rem);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 24px rgba(129, 140, 248, 0.8);
+  }
+
+  .lead {
+    color: #cbd5f5;
+    font-size: 0.98rem;
+    max-width: 40rem;
+    margin-bottom: 2rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.3rem;
+  }
+
+  .service {
+    padding: 1.3rem 1.2rem 1.1rem;
+    border-radius: 1.1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: radial-gradient(circle at top left, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+  }
+
+  .service h2 {
+    margin-top: 0;
+    font-size: 1.05rem;
+  }
+
+  .service p {
+    font-size: 0.92rem;
+    color: #d1d5db;
+  }
+
+  .service ul {
+    margin: 0.6rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.9rem;
+    color: #9ca3af;
+  }
+
+  .service li + li {
+    margin-top: 0.25rem;
+  }
+
+  @media (max-width: 960px) {
+    .services-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
