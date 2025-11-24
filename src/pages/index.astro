@@ -1,11 +1,31 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Titanumy.art</title>
+    <style>
+      body {
+        background: #020617;
+        color: #e5f5ff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 120px;
+      }
+      h1 {
+        font-size: 3rem;
+        color: #38bdf8;
+        text-shadow: 0 0 20px #0ea5e9;
+      }
+      p {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Welcome to Titanumy.art 🚀</h1>
+    <p>Astro + Netlify is LIVE and working.</p>
+  </body>
+</html>
