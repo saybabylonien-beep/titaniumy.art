@@ -1,30 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import home from "../content/home.json";
+
+const {
+  seoTitle,
+  heroEyebrow,
+  heroTitleLine1,
+  heroTitleLine2,
+  heroSub,
+  primaryCtaLabel,
+  primaryCtaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
+  heroBadges,
+  cards
+} = home;
 ---
 
-<Layout title="Titanumy.art – Cosmic Web Agency">
+<Layout title={seoTitle}>
   <section class="hero">
     <div class="hero-text">
-      <p class="eyebrow">Cosmic Web • SEO • Security</p>
+      <p class="eyebrow">{heroEyebrow}</p>
       <h1>
-        Space-grade websites<br />
-        for small businesses on Earth.
+        {heroTitleLine1}<br />
+        {heroTitleLine2}
       </h1>
       <p class="sub">
-        Titanumy.art builds fast, secure, and beautiful sites with a universe-level
-        vibe. Static, modern, SEO-ready, and protected by real cybersecurity
-        thinking.
+        {heroSub}
       </p>
 
       <div class="hero-actions">
-        <a href="/contact" class="btn primary">Start a project</a>
-        <a href="/services" class="btn ghost">View services</a>
+        <a href={primaryCtaHref} class="btn primary">{primaryCtaLabel}</a>
+        <a href={secondaryCtaHref} class="btn ghost">{secondaryCtaLabel}</a>
       </div>
 
       <div class="hero-meta">
-        <span>⚡ Astro + Netlify</span>
-        <span>🛡️ Security-minded by design</span>
-        <span>🚀 Ready to launch quickly</span>
+        {heroBadges.map((badge) => (
+          <span>{badge}</span>
+        ))}
       </div>
     </div>
 
@@ -38,27 +51,12 @@ import Layout from "../layouts/Layout.astro";
   </section>
 
   <section class="grid">
-    <article class="card">
-      <h2>Web Design</h2>
-      <p>
-        Clean, responsive one-page and multi-page sites with a futuristic Titanumy
-        style. Built static for speed and reliability.
-      </p>
-    </article>
-    <article class="card">
-      <h2>SEO & Performance</h2>
-      <p>
-        Optimized content, metadata, and structure so clients actually find your
-        website — not just your business card.
-      </p>
-    </article>
-    <article class="card">
-      <h2>Practical Cybersecurity</h2>
-      <p>
-        Basic hardening, HTTPS, security headers, and sane practices baked in from
-        the first commit. No snake-oil.
-      </p>
-    </article>
+    {cards.map((card) => (
+      <article class="card">
+        <h2>{card.title}</h2>
+        <p>{card.body}</p>
+      </article>
+    ))}
   </section>
 </Layout>
 
