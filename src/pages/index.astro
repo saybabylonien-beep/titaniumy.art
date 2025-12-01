@@ -25,9 +25,7 @@ const {
         {heroTitleLine1}<br />
         {heroTitleLine2}
       </h1>
-      <p class="sub">
-        {heroSub}
-      </p>
+      <p class="sub">{heroSub}</p>
 
       <div class="hero-actions">
         <a href={primaryCtaHref} class="btn primary">{primaryCtaLabel}</a>
@@ -61,6 +59,13 @@ const {
 </Layout>
 
 <style>
+  /* NEW SIMPLE COSMIC BACKGROUND */
+  :global(body) {
+    background: linear-gradient(140deg, #020617 0%, #0a1124 40%, #0f1b33 100%);
+    background-attachment: fixed;
+    color: #e5e7eb;
+  }
+
   .hero {
     display: grid;
     grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
@@ -121,22 +126,10 @@ const {
       0 0 40px rgba(8, 47, 73, 0.9);
   }
 
-  .btn.primary:hover {
-    transform: translateY(-1px);
-    box-shadow:
-      0 0 30px rgba(56, 189, 248, 1),
-      0 0 60px rgba(8, 47, 73, 1);
-  }
-
   .btn.ghost {
     border-color: rgba(148, 163, 184, 0.4);
     color: #e5f2ff;
     background: rgba(15, 23, 42, 0.7);
-  }
-
-  .btn.ghost:hover {
-    border-color: rgba(129, 140, 248, 0.9);
-    box-shadow: 0 0 18px rgba(129, 140, 248, 0.7);
   }
 
   .hero-meta {
@@ -146,13 +139,6 @@ const {
     margin-top: 0.8rem;
     font-size: 0.8rem;
     color: #9ca3af;
-  }
-
-  .hero-meta span {
-    padding: 0.3rem 0.7rem;
-    border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.4);
-    background: rgba(15, 23, 42, 0.8);
   }
 
   .hero-orbit {
@@ -209,8 +195,40 @@ const {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.4rem;
+    margin-top: 3rem;
   }
 
-  .
+  .card {
+    padding: 1.4rem 1.3rem 1.1rem;
+    border-radius: 1.1rem;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: rgba(15, 23, 42, 0.85);
+    box-shadow:
+      0 0 22px rgba(0, 0, 0, 0.5);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #e5e7eb;
+  }
+
+  .card p {
+    margin-bottom: 0;
+    font-size: 0.94rem;
+    color: #cbd5f5;
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .hero-orbit {
+      order: -1;
+      margin-bottom: 1.5rem;
+    }
+  }
+</style>
