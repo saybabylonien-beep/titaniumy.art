@@ -1,9 +1,19 @@
 {
-  "heroTitle": "Space-grade websites for small businesses on Earth.",
-  "heroSubtitle": "Titanumy.art builds fast, secure, and beautiful sites with a universe-level vibe.",
-  "services": [
-    "Web Design",
-    "SEO & Performance",
-    "Practical Cybersecurity"
+  "seoTitle": "Titanumy Web Agency",
+  "heroEyebrow": "Cosmic Web • SEO • Security",
+  "heroTitleLine1": "Space-grade websites",
+  "heroTitleLine2": "for small businesses",
+  "heroSub": "Titanumy.art builds fast, secure, and beautiful sites...",
+  "primaryCtaLabel": "Start a project",
+  "primaryCtaHref": "/contact",
+  "secondaryCtaLabel": "Services",
+  "secondaryCtaHref": "/services",
+  "heroBadges": ["Fast", "Secure", "SEO", "Modern"],
+  
+  "cards": [
+    { "title": "Web Design", "body": "..." },
+    { "title": "SEO", "body": "..." },
+    { "title": "Cybersecurity", "body": "..." },
+    { "title": "Business Consulting", "body": "..." }
   ]
 }
