@@ -9,11 +9,22 @@
   "secondaryCtaLabel": "Services",
   "secondaryCtaHref": "/services",
   "heroBadges": ["Fast", "Secure", "SEO", "Modern"],
+"cards": [
+  {
+    "title": "Web Design",
+    "body": "Modern, clean websites built to look professional and work on all devices."
+  },
+  {
+    "title": "SEO",
+    "body": "Improve your Google visibility so customers can find you faster."
+  },
+  {
+    "title": "Cybersecurity",
+    "body": "Secure setup with HTTPS, updates, backups, and basic protection."
+  },
+  {
+    "title": "Business Consulting",
+    "body": "Clear guidance to help you plan, start, and grow your business."
+  }
+]
   
-  "cards": [
-    { "title": "Web Design", "body": "..." },
-    { "title": "SEO", "body": "..." },
-    { "title": "Cybersecurity", "body": "..." },
-    { "title": "Business Consulting", "body": "..." }
-  ]
-}
